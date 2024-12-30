@@ -11,7 +11,7 @@ const app = express();
 const _dirname = path.resolve();
 app.use(express.json());
 app.use(cookieParser());
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use(
   cors({
     origin: "https://airbnb-zrat.onrender.com",
