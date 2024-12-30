@@ -11,7 +11,7 @@ export default function Booking() {
   const [bookings, setBookings] = useState([]);
   useEffect(() => {
     async function getBookings() {
-      const { data } = await axiosInstance.get("/user/bookings");
+      const { data } = await axiosInstance.get("/api/v1/user/bookings");
 
       const bookedPlace = data.find((booking) => booking._id === id);
       setBookings(bookedPlace);

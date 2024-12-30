@@ -19,7 +19,7 @@ export default function Profile() {
 
   async function logoutHandler() {
     try {
-      const response = await axiosInstance.get("/user/logout");
+      const response = await axiosInstance.get("/api/v1/user/logout");
       setUser(null);
       navigate("/login");
       toast.success(response.data.message);
@@ -30,7 +30,7 @@ export default function Profile() {
 
   useEffect(() => {
     async function getPlaces() {
-      const { data } = await axiosInstance.get("/user/places");
+      const { data } = await axiosInstance.get("/api/v1/user/places");
       setPlaceData(data);
     }
     getPlaces();

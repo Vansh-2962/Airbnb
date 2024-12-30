@@ -25,7 +25,7 @@ export default function Places() {
   useEffect(() => {
     async function getPlace() {
       if (id) {
-        const { data } = await axiosInstance.get(`/user/places/${id}`);
+        const { data } = await axiosInstance.get(`/api/v1/user/places/${id}`);
         setTitle(data.title);
         setAddress(data.address);
         setAddedPhotos(data.photos);
@@ -75,7 +75,7 @@ export default function Places() {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await axiosInstance.post("/user/upload-by-url", {
+      const response = await axiosInstance.post("/api/v1/user/upload-by-url", {
         photoUrl,
       });
       setPhotoUrl("");
@@ -90,7 +90,7 @@ export default function Places() {
   async function handleFormSubmit(e) {
     e.preventDefault();
     try {
-      const response = await axiosInstance.post("/user/places", {
+      const response = await axiosInstance.post("/api/v1/user/places", {
         title,
         address,
         photoUrl,
@@ -112,7 +112,7 @@ export default function Places() {
   async function editPlace(e) {
     e.preventDefault();
     if (id != "new") {
-      const response = await axiosInstance.put(`/user/places/${id}`, {
+      const response = await axiosInstance.put(`/api/v1/user/places/${id}`, {
         title,
         address,
         photoUrl,
@@ -133,7 +133,7 @@ export default function Places() {
     e.preventDefault();
     try {
       const response = await axiosInstance.delete(
-        `/user/photo/${filename}/${id}`
+        `/api/v1/user/photo/${filename}/${id}`
       );
       setAddedPhotos((addedPhotos) =>
         addedPhotos.filter((photo) => photo !== filename)

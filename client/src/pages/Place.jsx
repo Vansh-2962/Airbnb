@@ -13,7 +13,7 @@ export default function Place() {
 
   useEffect(() => {
     async function getPlace() {
-      const { data } = await axiosInstance.get(`/user/places/${id}`);
+      const { data } = await axiosInstance.get(`/api/v1/user/places/${id}`);
       setPlace(data);
     }
     getPlace();

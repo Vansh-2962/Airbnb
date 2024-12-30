@@ -8,7 +8,7 @@ export default function Home() {
   useEffect(() => {
     async function getAllPlaces() {
       try {
-        const { data } = await axiosInstance.get("/user/all-places");
+        const { data } = await axiosInstance.get("/api/v1/user/all-places");
         setPlaces(data);
       } catch (error) {
         toast.error("Could not fetch places");

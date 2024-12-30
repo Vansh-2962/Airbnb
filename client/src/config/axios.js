@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "https://airbnb-zrat.onrender.com/api/v1",
+  baseURL: "https://airbnb-zrat.onrender.com",
   withCredentials: true,
 });

@@ -15,7 +15,7 @@ export default function Register() {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await axiosInstance.post("/user/register", {
+      const response = await axiosInstance.post("/api/v1/user/register", {
         name,
         email,
         password,

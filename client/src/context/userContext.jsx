@@ -11,7 +11,7 @@ export const UserContextProvider = ({ children }) => {
     async function getUser() {
       if (!user) {
         // if the user is logged out then we have the loggedout state as true
-        const response = await axiosInstance.get("/user/me");
+        const response = await axiosInstance.get("/api/v1/user/me");
         setUser(response.data);
       }
     }
