@@ -14,7 +14,6 @@ export default function Booking() {
       const { data } = await axiosInstance.get("/user/bookings");
 
       const bookedPlace = data.find((booking) => booking._id === id);
-      console.log(bookedPlace);
       setBookings(bookedPlace);
     }
     getBookings();

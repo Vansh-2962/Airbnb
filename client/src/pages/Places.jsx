@@ -73,7 +73,6 @@ export default function Places() {
 
   async function handleFileUploadByUrl(e) {
     e.preventDefault();
-    console.log(photoUrl);
     try {
       setLoading(true);
       const response = await axiosInstance.post("/user/upload-by-url", {
@@ -104,10 +103,8 @@ export default function Places() {
         maxGuests,
         addedPhotos,
       });
-      console.log(response);
       navigate("/profile/accomodations");
     } catch (error) {
-      console.log(error);
       toast.error("Could not add place");
     }
   }
@@ -128,7 +125,6 @@ export default function Places() {
         maxGuests,
         addedPhotos,
       });
-      console.log(response);
       navigate("/profile/accomodations");
     }
   }
@@ -139,12 +135,10 @@ export default function Places() {
       const response = await axiosInstance.delete(
         `/user/photo/${filename}/${id}`
       );
-      console.log(response.data);
       setAddedPhotos((addedPhotos) =>
         addedPhotos.filter((photo) => photo !== filename)
       );
     } catch (error) {
-      console.log(error);
       toast.error("Could not remove photo");
     }
   }

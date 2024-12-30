@@ -28,7 +28,6 @@ exports.register = async (req, res) => {
 
     return res.status(201).json({ message: "Registered successfully", user });
   } catch (error) {
-    console.log(error);
     return res.status(500).json({ message: "Internal Server Error" });
   }
 };
@@ -95,7 +94,6 @@ exports.uploadByUrl = async (req, res) => {
       dest: path.join(__dirname, `../uploads/${newName}`),
     };
     const { filename } = await download.image(options);
-    console.log(filename);
     return res.status(200).json({ message: "Image uploaded ", newName });
   } catch (error) {
     return res.status(500).json({ message: "Internal Server Error" });
@@ -106,7 +104,6 @@ exports.uploadPhotoFromDevice = async (req, res) => {
   try {
     const uploadedFiles = req.files.map((file) => file.filename);
     const files = req.files;
-    console.log(files);
     return res.status(200).json(uploadedFiles);
   } catch (error) {
     return res.status(500).json({ message: "Internal Server Error" });
@@ -142,7 +139,6 @@ exports.addPlace = async (req, res) => {
     });
     res.status(200).json({ message: "Added successfully", place });
   } catch (error) {
-    console.log(error);
     return res.status(500).json({ message: "Internal Server Error" });
   }
 };
