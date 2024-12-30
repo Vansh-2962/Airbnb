@@ -27,7 +27,7 @@ export default function Home() {
             className="flex flex-col leading-5"
           >
             <img
-              src={`http://localhost:8000/uploads/${place?.photos[0]}`}
+              src={`https://airbnb-zrat.onrender.com/uploads/${place?.photos[0]}`}
               alt="img"
               className="rounded-lg w-80 aspect-square object-cover"
               loading="lazy"

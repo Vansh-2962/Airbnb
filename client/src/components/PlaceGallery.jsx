@@ -19,7 +19,7 @@ export default function PlaceGallery({ place }) {
           {place?.photos?.map((photo) => (
             <div className="  flex items-center justify-center gap-5">
               <img
-                src={`http://localhost:8000/uploads/${photo}`}
+                src={`https://airbnb-zrat.onrender.com/uploads/${photo}`}
                 alt="pics"
                 className="mt-4 rounded-xl"
               />
@@ -35,19 +35,19 @@ export default function PlaceGallery({ place }) {
       <div className="grid grid-cols-[2fr_1fr] mt-10 rounded-lg overflow-hidden gap-2 ">
         <div className="">
           <img
-            src={`http://localhost:8000/uploads/${place?.photos[0]}`}
+            src={`https://airbnb-zrat.onrender.com/uploads/${place?.photos[0]}`}
             alt="photo1"
             loading="lazy"
           />
         </div>
         <div className="grid grid-rows-2 relative">
           <img
-            src={`http://localhost:8000/uploads/${place?.photos[1]}`}
+            src={`https://airbnb-zrat.onrender.com/uploads/${place?.photos[1]}`}
             alt="photo2"
             loading="lazy"
           />
           <img
-            src={`http://localhost:8000/uploads/${place?.photos[2]}`}
+            src={`https://airbnb-zrat.onrender.com/uploads/${place?.photos[2]}`}
             alt="photo3"
             loading="lazy"
           />

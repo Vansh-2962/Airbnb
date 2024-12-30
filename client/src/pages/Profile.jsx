@@ -88,7 +88,7 @@ export default function Profile() {
                 className="cursor-pointer flex items-center gap-5 p-3 my-8 shadow-lg rounded-lg hover:scale-105 transition-all duration-200"
               >
                 <img
-                  src={`http://localhost:8000/uploads/${place.photos[0]}`}
+                  src={`https://airbnb-zrat.onrender.com/uploads/${place.photos[0]}`}
                   alt="img"
                   className="w-52 h-40  object-cover rounded-lg"
                 />

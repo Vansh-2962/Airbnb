@@ -205,7 +205,7 @@ export default function Places() {
               addedPhotos.map((photo, index) => (
                 <div key={index} className="p-1 w-full relative">
                   <img
-                    src={`http://localhost:8000/uploads/${photo}`}
+                    src={`https://airbnb-zrat.onrender.com/uploads/${photo}`}
                     className="w-34 h-30 object-cover rounded-lg"
                   />
                   <button

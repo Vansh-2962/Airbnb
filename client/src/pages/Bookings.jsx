@@ -26,7 +26,7 @@ export default function Bookings() {
             <div className="flex items-center mt-5 rounded-xl overflow-hidden bg-gray-100 ">
               <div className="w-44">
                 <img
-                  src={`http://localhost:8000/uploads/${booking?.placeId?.photos[0]}`}
+                  src={`https://airbnb-zrat.onrender.com/uploads/${booking?.placeId?.photos[0]}`}
                   alt="pic"
                   className="object-cover"
                 />
